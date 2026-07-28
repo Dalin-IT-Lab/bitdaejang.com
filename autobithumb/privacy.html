@@ -67,6 +67,24 @@
       </tr>
     </table>
 
+    <p><strong>(4) 광고 식별자 등(광고 SDK)</strong></p>
+    <table>
+      <tr>
+        <th>처리 항목(예시)</th>
+        <td>광고 식별자(Advertising ID), 기기·이벤트 정보, IP 주소, 대략적 위치 정보 등 — Google AdMob SDK가 광고 제공을 위해 처리</td>
+      </tr>
+      <tr><th>처리 주체</th><td>Google LLC (Google AdMob / Google Mobile Ads)</td></tr>
+      <tr><th>처리 목적</th><td>무료 기능 제공을 위한 보상형 광고 표시, 광고 성과 측정 및 부정 방지</td></tr>
+      <tr>
+        <th>참고</th>
+        <td>
+          앱 자체는 위 정보를 별도로 수집·저장하지 않으며, 처리 범위는 Google의 정책을 따릅니다.
+          (https://policies.google.com/technologies/ads)<br>
+          이용자는 기기 설정에서 광고 식별자를 초기화하거나 맞춤광고를 해제할 수 있습니다.
+        </td>
+      </tr>
+    </table>
+
     <h2>제2조 (개인정보의 수집 및 이용목적)</h2>
     <p>앱은 수집한 개인정보를 다음의 목적을 위해 활용합니다.</p>
     <p>
@@ -105,6 +123,11 @@
         <td>거래소 API 키</td>
         <td>Access Key, Secret Key</td>
         <td>이용자 기기 내 저장(서버 미저장). 이용자가 앱에서 삭제/변경 또는 앱 삭제 시 삭제</td>
+      </tr>
+      <tr>
+        <td>광고 식별자 등</td>
+        <td>광고 SDK 처리분</td>
+        <td>Google의 정책에 따름(이용자는 기기 설정에서 광고 식별자 초기화/맞춤광고 해제 가능)</td>
       </tr>
     </table>
 
@@ -145,11 +168,21 @@
         <td>구독 상태 검증을 위한 API 조회</td>
         <td>패키지명, 상품ID, 구독 토큰(검증 요청 시)</td>
       </tr>
+      <tr>
+        <td>Google LLC (Firebase Remote Config)</td>
+        <td>뉴스/RSS 항목 등 일부 표시 콘텐츠 설정 제공</td>
+        <td>개인정보 없음(개별 이용자 식별 정보 저장 목적 아님)</td>
+      </tr>
+      <tr>
+        <td>Google LLC (Google AdMob / Google Mobile Ads)</td>
+        <td>무료 기능 제공을 위한 보상형 광고 표시·성과 측정 및 부정 방지</td>
+        <td>광고 식별자, 기기·이벤트 정보, IP 주소, 대략적 위치 정보 등</td>
+      </tr>
     </table>
 
     <h2>제7조 (국외 이전에 관한 사항)</h2>
     <p>
-      앱은 Google Firebase 및 Google Play 관련 서비스 이용 과정에서 개인정보가 국외 서버에서 처리될 수 있습니다.
+      앱은 Google Firebase, Google Play 및 광고 제공(Google AdMob) 관련 서비스 이용 과정에서 개인정보가 국외 서버에서 처리될 수 있습니다.
       국외 이전과 관련한 사항은 아래와 같습니다.
     </p>
     <table>
@@ -176,6 +209,22 @@
         <td>구독 상태 검증</td>
         <td>검증 요청 시 네트워크를 통한 전송</td>
         <td>검증 처리 목적 달성 시까지(필요 최소)</td>
+      </tr>
+      <tr>
+        <td>Google LLC</td>
+        <td>미국 등(서비스 제공 국가)</td>
+        <td>Remote Config 제공을 위한 설정/구성 데이터(개인정보 아님)</td>
+        <td>앱 내 뉴스/RSS 등 표시 콘텐츠 설정 제공</td>
+        <td>서비스 이용 시 네트워크를 통한 전송</td>
+        <td>해당 목적 달성 시까지(필요 최소)</td>
+      </tr>
+      <tr>
+        <td>Google LLC</td>
+        <td>미국 등(서비스 제공 국가)</td>
+        <td>광고 식별자, 기기·이벤트 정보, IP 주소, 대략적 위치 정보 등</td>
+        <td>앱 내 광고 표시·성과 측정</td>
+        <td>광고 노출 시 네트워크를 통한 전송</td>
+        <td>Google의 정책에 따름</td>
       </tr>
     </table>
 
