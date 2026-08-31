@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개인정보처리방침 - 소리대장</title>
   <style>
+    *{box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background-color:#f4f7f6;color:#333;margin:0;padding:20px;display:flex;justify-content:center;align-items:center;min-height:100vh}
     .container{width:100%;max-width:900px;background-color:#fff;padding:40px 50px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.07)}
     h1{color:#2c3e50;margin-top:0;margin-bottom:5px;text-align:center}
@@ -17,6 +18,8 @@
     .note{background:#f7f9ff;border:1px solid #e3e9ff;padding:12px;border-radius:8px;margin:12px 0}
     footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #eee;font-size:.95em;color:#777}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+    a{color:#2457a7;word-break:break-all}
+    @media(max-width:700px){body{padding:10px}.container{padding:24px 18px}table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
   </style>
 </head>
 <body>
@@ -32,20 +35,23 @@
 
     <div class="note">
       <strong>핵심 요약</strong><br>
-      1) 본 앱은 <strong>로그인 기능이 없으며</strong> 이메일/계정 등 개인정보를 수집·저장하지 않습니다.
+      1) 본 앱은 <strong>로그인 기능이 없으며</strong>, 서비스 운영자는 이메일·계정 정보를 직접 수집·저장하지 않습니다.
       <br>
       2) 이용자가 만든 사운드와 출력 기기별 설정은 <strong>이용자 기기(스마트폰)에만</strong> 저장됩니다.
       <br>
       3) <strong>소리를 녹음하거나 저장하지 않습니다.</strong> 소리 그래프는 나가는 소리의 크기를 화면에 그리는 데에만 쓰이며, 값은 그 즉시 사라집니다.
       <br>
-      4) 앱은 <strong>위치정보(GPS)를 일절 사용하지 않으며</strong>, 이용자가 무엇을 언제 들었는지 기록하지 않습니다.
+      4) 앱은 <strong>GPS 등 정밀 위치 권한을 요청하지 않으며</strong>, 이용자가 무엇을 언제 들었는지 기록하지 않습니다. 다만 광고 SDK는 IP 주소로 대략적인 지역을 추정할 수 있습니다.
       <br>
-      5) 무료 제공을 위해 <strong>Google AdMob 광고</strong>를 사용하며, 광고 제공 과정에서 광고 식별자 등 일부 기기 정보가 Google에 의해 처리될 수 있습니다.
+      5) 무료 제공을 위해 <strong>Google AdMob 광고</strong>를 사용합니다. Google 광고 SDK는 IP 주소, 이용자 상호작용, 진단 정보 및 기기·계정 식별자를 광고·분석·부정행위 방지 목적으로 처리할 수 있습니다.
+      <br>
+      6) <strong>Google Play 인앱 업데이트</strong>를 사용하며, 업데이트 확인을 위해 기기 메타데이터와 앱 버전 등이 Google Play에서 처리될 수 있습니다.
     </div>
 
     <h2>제1조 (수집하는 개인정보의 항목 및 수집방법)</h2>
     <p>
-      앱은 회원가입/로그인을 제공하지 않으며, 원칙적으로 이용자의 <strong>개인정보를 직접 수집하지 않습니다.</strong>
+      앱은 회원가입/로그인을 제공하지 않으며, 서비스 운영자는 원칙적으로 이용자의 <strong>개인정보를 직접 수집하지 않습니다.</strong>
+      다만 앱에 포함된 Google SDK는 광고, 개인정보 선택 및 업데이트 기능을 제공하기 위해 아래 정보를 자동으로 처리할 수 있습니다.
     </p>
 
     <p><strong>(1) 계정/로그인</strong></p>
@@ -69,7 +75,10 @@
     <table>
       <tr>
         <th>처리 항목</th>
-        <td>지금 소리가 나가는 출력 장치의 <strong>이름과 종류</strong>(예: 휴대폰 스피커, Bluetooth 이어폰 이름)</td>
+        <td>
+          지금 소리가 나가는 출력 장치의 <strong>이름과 종류</strong>(예: 휴대폰 스피커, Bluetooth 이어폰 이름),
+          그리고 같은 모델의 출력 기기를 구분하기 위해 안드로이드가 제공한 장치 주소로부터 기기 안에서 만든 <strong>짧은 해시값</strong>
+        </td>
       </tr>
       <tr>
         <th>처리 시점</th>
@@ -81,7 +90,10 @@
       </tr>
       <tr>
         <th>보관 여부</th>
-        <td>설정을 구분하는 이름표로만 <strong>이용자 기기에 저장</strong>됩니다. 앱 삭제 또는 데이터 삭제 시 함께 지워집니다.</td>
+        <td>
+          설정을 구분하는 이름표로만 <strong>이용자 기기에 저장</strong>됩니다.
+          원래 장치 주소는 저장하지 않으며, 앱 삭제 또는 데이터 삭제 시 함께 지워집니다.
+        </td>
       </tr>
       <tr>
         <th>외부 전송</th>
@@ -126,15 +138,41 @@
       권한을 허용하지 않아도 EQ 기능은 모두 정상 동작하며, 그래프만 표시되지 않습니다.
     </p>
 
-    <p><strong>(5) 광고 식별자 등(광고 SDK)</strong></p>
+    <p><strong>(5) 광고 및 개인정보 선택(Google AdMob·UMP SDK)</strong></p>
     <table>
       <tr>
-        <th>처리 항목(예시)</th>
-        <td>광고 식별자(Advertising ID), 기기·이벤트 정보, 대략적 위치 정보 등 — Google AdMob SDK가 광고 제공을 위해 처리</td>
+        <th>처리 항목</th>
+        <td>
+          IP 주소(IP 기반의 대략적 위치 추정 포함), 앱 실행·탭·광고 동영상 조회 등의 이용자 상호작용,
+          앱 및 SDK 진단 정보(앱 시작 시간·멈춤 발생률·에너지 사용량 등),
+          광고 ID·앱 세트 ID 및 해당되는 경우 기기에 로그인된 계정과 관련된 기타 식별자
+        </td>
       </tr>
-      <tr><th>처리 주체</th><td>Google LLC (Google AdMob / Google Mobile Ads)</td></tr>
-      <tr><th>처리 목적</th><td>광고 표시, 광고 성과 측정 및 부정 방지</td></tr>
-      <tr><th>참고</th><td>앱 자체는 위 정보를 별도로 수집·저장하지 않으며, 처리 범위는 Google의 정책을 따릅니다. (<span class="mono">https://policies.google.com/technologies/ads</span>)</td></tr>
+      <tr><th>처리 주체</th><td>Google LLC (Google AdMob / Google Mobile Ads / User Messaging Platform)</td></tr>
+      <tr><th>처리 시점·방법</th><td>앱 실행, 개인정보 선택 확인 및 광고 요청·표시 과정에서 SDK가 네트워크를 통해 자동 처리</td></tr>
+      <tr><th>처리 목적</th><td>광고 표시, 광고 및 앱 이용 분석, 부정행위 방지·보안·규정 준수, 관련 지역의 광고 개인정보 선택 관리</td></tr>
+      <tr><th>운영자의 처리</th><td>서비스 운영자는 위 정보를 별도로 열람하거나 자체 서버에 저장하지 않습니다.</td></tr>
+      <tr>
+        <th>참고</th>
+        <td>
+          전송 중인 정보는 TLS로 암호화되며, 실제 처리 범위는 이용자의 개인정보 선택과 Google 정책에 따라 달라질 수 있습니다.<br>
+          <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a> ·
+          <a href="https://policies.google.com/technologies/ads?hl=ko">Google 광고 관련 정책</a>
+        </td>
+      </tr>
+    </table>
+
+    <p><strong>(6) Google Play 인앱 업데이트</strong></p>
+    <table>
+      <tr>
+        <th>처리 항목</th>
+        <td>기기 메타데이터, 현재 앱 버전, 설치된 모듈 및 애셋 팩 목록</td>
+      </tr>
+      <tr><th>처리 주체</th><td>Google LLC (Google Play / Play Core)</td></tr>
+      <tr><th>처리 시점·방법</th><td>앱이 Google Play에 업데이트 가능 여부를 확인할 때 네트워크를 통해 처리</td></tr>
+      <tr><th>처리 목적</th><td>사용 가능한 업데이트와 예상 다운로드 크기 확인, 이용자가 선택한 업데이트의 다운로드·설치</td></tr>
+      <tr><th>보호 및 공유</th><td>전송 중 암호화되며, Google의 안내에 따르면 제3자에게 전송되지 않고 정해진 보유기간 후 삭제됩니다.</td></tr>
+      <tr><th>운영자의 처리</th><td>서비스 운영자는 위 정보를 자체 서버에 저장하지 않습니다.</td></tr>
     </table>
 
     <h2>제1조의2 (접근권한 안내)</h2>
@@ -170,11 +208,11 @@
       <tr>
         <td>인터넷<br><span class="mono">INTERNET</span>, <span class="mono">ACCESS_NETWORK_STATE</span></td>
         <td>필수</td>
-        <td>광고를 불러올 때만 사용. 그 외 목적의 네트워크 통신은 하지 않습니다.</td>
+        <td>광고 및 광고 개인정보 선택 정보를 불러오고, Google Play에서 앱 업데이트를 확인·다운로드하는 데 사용합니다.</td>
       </tr>
     </table>
     <p class="note">
-      ※ 앱은 <strong>위치(GPS) 권한을 요청하지 않습니다.</strong><br>
+      ※ 앱은 <strong>GPS 등 정밀 위치 권한을 요청하지 않습니다.</strong> 다만 Google 광고 SDK는 IP 주소로 대략적인 지역을 추정할 수 있습니다.<br>
       ※ 앱은 <strong>카메라·연락처·저장소·Bluetooth 권한을 요청하지 않습니다.</strong><br>
       ※ 앱은 <strong>사용 정보 접근(UsageStats)이나 접근성 서비스(Accessibility)를 사용하지 않습니다.</strong>
       따라서 이용자가 어떤 앱으로 무엇을 들었는지 알 수 없습니다.
@@ -182,9 +220,11 @@
 
     <h2>제2조 (개인정보의 수집 및 이용목적)</h2>
     <p>
-      앱은 원칙적으로 개인정보를 직접 수집·이용하지 않습니다.
+      서비스 운영자는 원칙적으로 개인정보를 직접 수집·이용하지 않습니다.
       이용자가 만든 사운드와 출력 기기별 설정은 서비스 기능 제공을 위해 <strong>이용자 기기에서만</strong> 처리되며,
-      광고 식별자 등은 무료 서비스 운영을 위한 광고 제공 목적으로 광고 SDK(Google AdMob)를 통해 처리됩니다.
+      광고 관련 정보는 무료 서비스 운영을 위한 광고·분석·부정행위 방지 목적으로 Google AdMob을 통해 처리됩니다.
+      개인정보 선택 상태는 관련 법령 준수와 광고 요청 가능 여부 확인을 위해 Google UMP를 통해 처리될 수 있으며,
+      인앱 업데이트 정보는 업데이트 가능 여부와 예상 크기 확인을 위해 Google Play에서 처리됩니다.
     </p>
 
     <h2>제3조 (개인정보의 보유 및 이용기간)</h2>
@@ -206,7 +246,7 @@
       </tr>
       <tr>
         <td>출력 기기 정보</td>
-        <td>출력 장치 이름·종류(설정 구분용)</td>
+        <td>출력 장치 이름·종류 및 장치 주소로부터 만든 짧은 해시값(설정 구분용, 원래 주소는 저장하지 않음)</td>
         <td>이용자 기기에 저장되며, 앱 내 데이터 삭제 또는 앱 삭제 시 삭제</td>
       </tr>
       <tr>
@@ -215,98 +255,141 @@
         <td>저장하지 않음(화면에 그리는 즉시 사라짐)</td>
       </tr>
       <tr>
-        <td>광고 식별자 등</td>
-        <td>광고 SDK 처리분</td>
-        <td>Google의 정책에 따름(이용자는 기기 설정에서 광고 식별자 초기화/맞춤광고 해제 가능)</td>
+        <td>광고 관련 정보</td>
+        <td>IP 주소, 이용자 상호작용, 진단 정보, 기기·계정 식별자 등 Google 광고 SDK 처리분</td>
+        <td>Google 정책에 따름. 이용자는 앱의 광고 개인정보 설정과 안드로이드 광고 설정에서 가능한 선택을 관리할 수 있음</td>
+      </tr>
+      <tr>
+        <td>인앱 업데이트 정보</td>
+        <td>기기 메타데이터, 앱 버전, 설치된 모듈 및 애셋 팩 목록</td>
+        <td>Google이 정한 보유기간 동안 처리된 후 삭제</td>
       </tr>
     </table>
 
     <h2>제4조 (개인정보의 파기절차 및 방법)</h2>
     <p>
-      앱은 개인정보를 직접 수집·저장하지 않습니다.
+      서비스 운영자는 개인정보를 직접 수집·저장하지 않습니다.
       설정값은 이용자 기기에 저장되므로, 이용자는 앱 삭제 또는 기기 설정의 앱 데이터 삭제를 통해 해당 데이터를 삭제할 수 있습니다.
+      Google SDK가 처리하는 정보의 삭제 및 보유기간은 Google의 정책과 이용자가 사용할 수 있는 개인정보 관리 기능을 따릅니다.
     </p>
 
     <h2>제5조 (개인정보의 제3자 제공)</h2>
     <p>
-      앱은 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 광고 제공을 위해 광고 SDK(Google AdMob)가 광고 식별자 등 일부 기기 정보를 Google의 정책에 따라 처리할 수 있습니다.
+      서비스 운영자는 기기 안에 저장되는 앱 설정, 출력 기기 정보 또는 소리 그래프 값을 제3자에게 제공하지 않습니다.
+      다만 Google Mobile Ads SDK는 제1조 제5항의 광고 관련 정보를 자동 수집하고 광고·분석·부정행위 방지 목적으로 공유할 수 있습니다.
+      해당 처리는 Google의 정책과 이용자의 적용 가능한 개인정보 선택에 따릅니다.
     </p>
     <p class="note">
       ※ <strong>소리 데이터와 출력 기기 정보는 어떤 경우에도 제3자에게 제공되지 않습니다.</strong>
       해당 정보는 기기 안에서만 쓰이며 기기 밖으로 나가지 않습니다.
     </p>
 
-    <h2>제6조 (개인정보 처리위탁)</h2>
+    <h2>제6조 (외부 서비스 이용 및 개인정보 처리)</h2>
     <p>
-      앱은 개인정보를 직접 수집·저장하지 않습니다. 다만, 아래 외부 서비스는 앱 기능 제공을 위해 사용될 수 있습니다.
+      앱에는 아래 Google 서비스가 포함되어 있습니다. 서비스 운영자는 이들 SDK가 처리하는 정보를 자체 서버에 별도로 저장하지 않으며,
+      각 서비스의 구체적인 처리 범위와 보유기간은 해당 제공자의 정책에 따릅니다.
     </p>
     <table>
       <tr>
-        <th>수탁자</th>
+        <th>제공자·서비스</th>
         <th>이용 목적</th>
-        <th>처리/전송 항목(예시)</th>
+        <th>처리 항목</th>
       </tr>
       <tr>
-        <td>Google LLC (Google AdMob)</td>
-        <td>무료 서비스 운영을 위한 광고 제공·측정</td>
-        <td>광고 식별자, 기기·이벤트 정보, 대략적 위치 정보 등</td>
+        <td>Google LLC<br>Google AdMob / Google Mobile Ads / UMP</td>
+        <td>광고 제공·분석·부정행위 방지 및 광고 개인정보 선택 관리</td>
+        <td>IP 주소, 이용자 상호작용, 진단 정보, 기기·계정 식별자 및 개인정보 선택 관련 정보</td>
+      </tr>
+      <tr>
+        <td>Google LLC<br>Google Play / Play Core</td>
+        <td>인앱 업데이트 가능 여부·예상 크기 확인 및 업데이트 제공</td>
+        <td>기기 메타데이터, 앱 버전, 설치된 모듈 및 애셋 팩 목록</td>
       </tr>
     </table>
     <p class="note">
-      ※ 앱이 사용하는 외부 서비스는 <strong>광고(Google AdMob) 하나뿐</strong>이며,
-      음원 분석·클라우드 저장·통계 등 다른 외부 서비스는 사용하지 않습니다.
+      ※ 앱은 음원 분석, 소리·설정의 클라우드 저장, 자체 이용자 통계 서버를 사용하지 않습니다.
+      Google 서비스에 관한 자세한 내용은
+      <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>에서 확인할 수 있습니다.
     </p>
 
     <h2>제7조 (국외 이전에 관한 사항)</h2>
     <p>
-      앱은 광고 제공(Google AdMob) 과정에서 관련 정보가 국외 서버에서 처리될 수 있습니다.
-      단, 앱은 이메일/계정 등 개인정보를 직접 수집·저장하지 않으며,
+      Google의 광고, 개인정보 선택 및 인앱 업데이트 기능을 이용하는 과정에서 관련 정보가 국외 서버에서 처리될 수 있습니다.
+      단, 서비스 운영자는 이메일·계정 정보를 직접 수집·저장하지 않으며,
       <strong>이용자가 만든 사운드 설정이나 출력 기기 정보, 소리 데이터를 국외로 전송하지 않습니다.</strong>
+      별도 동의가 필요한 경우에는 관련 법령과 Google이 제공하는 개인정보 선택 절차에 따라 동의를 확인한 후 처리합니다.
     </p>
     <table>
       <tr>
-        <th>이전받는 자</th>
+        <th>이전받는 자·연락처</th>
         <th>이전 국가</th>
-        <th>이전 항목(예시)</th>
+        <th>이전 항목</th>
         <th>이전 목적</th>
         <th>이전 시점/방법</th>
         <th>보유·이용기간</th>
       </tr>
       <tr>
-        <td>Google LLC</td>
-        <td>미국 등(서비스 제공 국가)</td>
-        <td>광고 식별자 등 광고 제공 관련 정보</td>
-        <td>앱 내 광고 표시·측정</td>
-        <td>서비스 이용 시 네트워크를 통한 전송</td>
+        <td>Google LLC<br><a href="https://support.google.com/policies/answer/9581826?hl=ko">Google 개인정보 보호 문의</a></td>
+        <td>미국 등 Google의 서비스 처리 국가</td>
+        <td>IP 주소, 이용자 상호작용, 진단 정보, 기기·계정 식별자 및 개인정보 선택 관련 정보</td>
+        <td>광고 제공·분석·부정행위 방지 및 광고 개인정보 선택 관리</td>
+        <td>앱 실행, 개인정보 선택 확인 및 광고 요청·표시 시 네트워크를 통해 전송</td>
         <td>Google의 정책에 따름</td>
       </tr>
+      <tr>
+        <td>Google LLC<br><a href="https://support.google.com/policies/answer/9581826?hl=ko">Google 개인정보 보호 문의</a></td>
+        <td>미국 등 Google의 서비스 처리 국가</td>
+        <td>기기 메타데이터, 앱 버전, 설치된 모듈 및 애셋 팩 목록</td>
+        <td>업데이트 가능 여부와 예상 다운로드 크기 확인 및 업데이트 제공</td>
+        <td>앱이 Google Play에 업데이트를 확인할 때 네트워크를 통해 전송</td>
+        <td>Google이 정한 보유기간 후 삭제</td>
+      </tr>
     </table>
+    <p class="note">
+      ※ 이용자는 앱의 <strong>광고 개인정보 설정</strong>과 안드로이드의 광고 설정을 통해 제공되는 선택을 관리할 수 있습니다.
+      네트워크 또는 Google Play 사용을 제한하면 인앱 업데이트 확인이 제공되지 않을 수 있으나, EQ의 기본 기능은 계속 사용할 수 있습니다.
+    </p>
 
     <h2>제8조 (이용자의 권리 및 행사방법)</h2>
     <p>
-      앱은 개인정보를 직접 수집·저장하지 않으므로, 개인정보 조회/정정/삭제 요청 대상이 원칙적으로 없습니다.
+      서비스 운영자는 개인정보를 직접 수집·저장하지 않으므로, 운영자가 보유한 개인정보의 조회·정정·삭제 요청 대상은 원칙적으로 없습니다.
       이용자가 기기 내에 저장한 설정값은 앱 삭제 또는 기기 설정의 앱 데이터 삭제로 제거할 수 있습니다.
       EQ는 앱 화면이나 알림에서 언제든 끌 수 있으며, 기기 설정에서 마이크 권한을 철회하면 소리 그래프만 표시되지 않고 나머지 기능은 그대로 사용할 수 있습니다.
-      광고 맞춤화는 기기의 광고 설정(광고 식별자 초기화/맞춤광고 끄기)을 통해 조정할 수 있습니다.
+      해당 지역에서 개인정보 선택 메뉴가 필요한 경우 앱 정보 화면의 <strong>광고 개인정보 설정</strong>에서 선택을 다시 관리할 수 있습니다.
+      안드로이드의 광고 설정에서는 광고 ID를 재설정·삭제하거나 제공되는 광고 개인정보 선택을 조정할 수 있습니다.
+      Google이 처리하는 정보에 관한 권리 행사는
+      <a href="https://support.google.com/policies/answer/9581826?hl=ko">Google 개인정보 보호 고객센터</a>를 이용할 수 있습니다.
     </p>
 
     <h2>제9조 (개인정보의 안전성 확보 조치)</h2>
     <p>
-      앱은 개인정보를 직접 수집·저장하지 않습니다.
+      서비스 운영자는 개인정보를 직접 수집·저장하지 않습니다.
       다만, 이용자의 기기에 저장되는 설정값이 분실/도난/유출되지 않도록
       기기 보안(잠금화면, OS 보안 업데이트 등) 설정을 권장합니다.
+      Google SDK가 전송하는 정보는 TLS로 암호화되며, 외부 서비스의 안전성 확보 조치는 Google 정책을 따릅니다.
     </p>
 
     <h2>제10조 (개인정보처리방침의 변경)</h2>
     <p>
       본 개인정보처리방침의 내용 추가, 삭제 및 수정이 있을 경우 개정 최소 7일 전부터
-      앱 내 공지사항 또는 공식 채널을 통하여 고지할 것입니다.
+      앱 내 공지사항 또는 공식 채널을 통하여 고지합니다.
+      이용자의 권리에 중대한 영향을 미치는 변경은 가능한 경우 최소 30일 전에 알립니다.
     </p>
 
-    <h2>제11조 (문의처)</h2>
+    <h2>제11조 (권익침해 구제방법)</h2>
     <p>
-      개인정보처리방침에 대한 문의사항은 아래의 연락처로 문의해 주시기 바랍니다.<br />
-      * 이메일: koreadaejangbiz@gmail.com
+      개인정보 침해에 대한 상담이나 분쟁조정이 필요한 경우 아래 기관에 문의할 수 있습니다.
+    </p>
+    <ul>
+      <li>개인정보침해신고센터: 국번 없이 118 (<a href="https://privacy.kisa.or.kr/">privacy.kisa.or.kr</a>)</li>
+      <li>개인정보분쟁조정위원회: 1833-6972 (<a href="https://www.kopico.go.kr/">www.kopico.go.kr</a>)</li>
+    </ul>
+
+    <h2>제12조 (개인정보 보호 담당 및 문의처)</h2>
+    <p>
+      담당: Dalin Soft 개인정보 보호 담당<br />
+      이메일: <a href="mailto:koreadaejangbiz@gmail.com">koreadaejangbiz@gmail.com</a><br />
+      개인정보처리방침, 개인정보 관련 고충 또는 권리 행사에 관한 문의를 위 연락처로 보내주시면 확인 후 답변드리겠습니다.
     </p>
 
     <footer>

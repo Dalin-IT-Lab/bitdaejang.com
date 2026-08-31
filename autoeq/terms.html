@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>서비스이용약관 - 소리대장</title>
+  <title>서비스 이용약관 - 소리대장</title>
   <style>
+    *{box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background-color:#f4f7f6;color:#333;margin:0;padding:20px;display:flex;justify-content:center;align-items:center;min-height:100vh}
     .container{width:100%;max-width:800px;background-color:#fff;padding:40px 50px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.07)}
     h1{color:#2c3e50;margin-top:0;margin-bottom:5px;text-align:center}
@@ -16,6 +17,7 @@
     .warning{background-color:#fff3cd;border:1px solid #ffeaa7;padding:15px;border-radius:5px;margin:15px 0}
     footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #eee;font-size:.95em;color:#777}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+    @media(max-width:600px){body{padding:10px}.container{padding:24px 18px}}
   </style>
 </head>
 <body>
@@ -35,7 +37,7 @@
       <li><strong>"서비스"</strong>: 안드로이드 기기가 제공하는 음향 효과(이퀄라이저)를 조절하고, 지금 소리가 나가는 출력 기기별로 그 설정을 기억해 자동으로 바꿔 주는 모바일 애플리케이션을 의미합니다.</li>
       <li><strong>"사운드"</strong>: 이용자가 고를 수 있는 음향 설정을 의미하며, 서비스가 미리 제공하는 <strong>기본 사운드</strong>와 이용자가 직접 만드는 <strong>사용자 슬롯</strong>으로 나뉩니다.</li>
       <li><strong>"출력 기기"</strong>: 휴대폰 스피커, 유선 이어폰, Bluetooth 이어폰·스피커, 차량 오디오 등 소리가 실제로 나가는 장치를 의미합니다.</li>
-      <li><strong>"세션"</strong>: 이용자가 EQ를 켠 시점부터 정해진 시간 동안 음향 효과가 유지되는 구간을 의미하며, 시간이 지나면 <strong>자동으로 종료</strong>됩니다.</li>
+      <li><strong>"세션"</strong>: 이용자가 EQ를 켠 시점부터 12시간 동안 음향 효과가 유지되는 구간을 의미하며, 시간이 지나면 <strong>자동으로 종료</strong>됩니다.</li>
       <li><strong>"소리 그래프"</strong>: 지금 나가고 있는 소리의 크기를 막대로 보여주는 화면 요소를 의미하며, <strong>이용자가 직접 켠 경우에만</strong> 동작합니다.</li>
       <li><strong>"이용자"</strong>: 본 약관에 동의하고 서비스를 이용하는 자를 말합니다.</li>
     </ul>
@@ -61,14 +63,15 @@
       <li>지금 소리가 나가는 출력 기기의 확인</li>
       <li><strong>출력 기기별 설정 저장 및 기기 변경 시 자동 전환</strong></li>
       <li>나가는 소리를 막대로 보여주는 소리 그래프(선택 기능)</li>
-      <li><strong>세션 자동 종료</strong> — 켠 시점부터 정해진 시간이 지나면 음향 효과가 스스로 꺼짐</li>
+      <li><strong>세션 자동 종료</strong> — 켠 시점부터 12시간이 지나면 음향 효과가 스스로 꺼짐</li>
     </ul>
 
     <p><strong>2) 무료 제공 및 광고</strong></p>
     <ul>
       <li>서비스는 무료로 제공되며, 운영 비용 충당을 위해 광고(전면광고 등)를 표시할 수 있습니다.</li>
-      <li>광고는 <strong>세션이 끝난 뒤 이용자가 다시 EQ를 켜는 시점에만</strong> 표시될 수 있습니다. 사운드를 고르거나, 출력 기기가 바뀌거나, EQ를 사용하는 중에는 광고가 표시되지 않습니다.</li>
-      <li>광고는 Google AdMob 등 제3자 광고 네트워크를 통해 제공되며, 광고 정책은 운영상 필요에 따라 변경될 수 있습니다. 변경 시 서비스 내 공지를 통해 안내합니다.</li>
+      <li>첫 설치인지 기존 설치인지와 관계없이, 남아 있는 세션이 없는 상태에서 이용자가 <strong>새로운 12시간 EQ 세션을 시작할 때 광고가 1회 표시될 수 있습니다.</strong></li>
+      <li>사운드를 고르거나, 출력 기기가 바뀌거나, 이미 시작된 세션에서 EQ를 다시 켜는 경우에는 광고가 추가로 표시되지 않습니다.</li>
+      <li>광고는 Google AdMob을 통해 제공됩니다. 관련 법령이 적용되는 지역에서는 Google User Messaging Platform(UMP)을 통해 광고 개인정보 선택 또는 동의 화면이 제공될 수 있습니다.</li>
       <li>광고를 불러오지 못하더라도 EQ 기능은 정상적으로 사용할 수 있습니다.</li>
     </ul>
 
@@ -82,9 +85,9 @@
 
     <h2>제7조 (데이터 저장 및 전송)</h2>
     <ul>
-      <li>이용자가 만든 사운드(이름과 조절값), 출력 기기별로 고른 사운드, 세션 만료 시각은 이용자 기기(스마트폰)에 저장됩니다.</li>
-      <li>출력 기기를 구분하기 위해 <strong>기기가 알려주는 출력 장치의 이름과 종류</strong>를 함께 저장합니다. 이 정보는 설정을 구분하는 용도로만 쓰이며 기기 밖으로 나가지 않습니다.</li>
-      <li>서비스는 위 정보를 외부 서버로 전송하거나 서버에 저장하지 않습니다.</li>
+      <li>이용자가 만든 사운드(이름과 조절값), 출력 기기별로 고른 사운드, EQ 켜짐 여부 및 세션 만료 시각은 이용자 기기(스마트폰)에 저장됩니다.</li>
+      <li>출력 기기를 구분하기 위해 <strong>안드로이드가 알려주는 출력 장치의 이름·종류와 장치 주소로부터 기기 안에서 만든 짧은 해시값</strong>을 저장할 수 있습니다. 원래 장치 주소는 저장하지 않습니다.</li>
+      <li>서비스 운영자는 위 설정 정보를 외부 서버로 전송하거나 서버에 저장하지 않습니다. 다만 광고 및 업데이트 기능에 필요한 정보는 제9조에 따라 Google 서비스에서 별도로 처리될 수 있습니다.</li>
       <li>서비스는 <strong>이용자가 무엇을 언제 들었는지 기록하거나 수집하지 않습니다.</strong></li>
       <li>이용자 기기 환경(앱 삭제/데이터 초기화/기기 변경/OS 업데이트 등)에 따라 설정이 소실될 수 있으며, 서비스는 이에 대한 책임을 지지 않습니다.</li>
     </ul>
@@ -100,10 +103,12 @@
 
     <h2>제9조 (광고 및 외부 서비스 안내)</h2>
     <ul>
-      <li>서비스는 Google AdMob(Google Mobile Ads)을 사용하여 광고를 표시합니다. 광고 제공 과정에서 Google은 광고 식별자 등 일부 기기 정보를 처리할 수 있으며, 이는 Google의 정책에 따릅니다.</li>
-      <li>서비스가 인터넷을 사용하는 경우는 <strong>광고를 불러올 때뿐</strong>이며, 그 외의 목적으로 네트워크를 사용하지 않습니다.</li>
-      <li>서비스는 위치정보(GPS)를 사용하지 않습니다.</li>
-      <li>서비스는 이메일, 계정 등 개인정보를 수집·저장하지 않습니다. 자세한 사항은 개인정보처리방침을 참고하시기 바랍니다.</li>
+      <li>서비스는 Google AdMob(Google Mobile Ads SDK)을 사용하여 광고를 표시하고, Google User Messaging Platform(UMP)을 사용하여 필요한 지역에서 광고 개인정보 선택을 관리합니다.</li>
+      <li>광고 SDK는 IP 주소(IP 기반의 대략적 위치 추정 포함), 앱 실행·탭·광고 동영상 조회 등의 이용자 상호작용, 앱 및 SDK 진단 정보, 광고 ID·앱 세트 ID 등의 기기·계정 식별자를 광고, 분석 및 부정행위 방지 목적으로 자동 수집·공유할 수 있습니다.</li>
+      <li>서비스는 Google Play 인앱 업데이트 기능을 사용합니다. 업데이트 확인 과정에서 Google Play는 기기 메타데이터, 앱 버전, 설치된 모듈 및 애셋 팩 목록을 업데이트 가능 여부와 예상 크기 확인 목적으로 처리할 수 있습니다.</li>
+      <li>인터넷은 광고 및 광고 개인정보 선택 정보를 불러오고, Google Play에서 앱 업데이트를 확인·다운로드하는 데 사용됩니다.</li>
+      <li>서비스는 GPS 등 정밀 위치 권한을 요청하거나 사용하지 않습니다. 다만 광고 SDK는 IP 주소를 이용해 기기의 대략적인 지역을 추정할 수 있습니다.</li>
+      <li>서비스 운영자는 이메일이나 계정 정보를 직접 수집·저장하지 않습니다. 외부 서비스의 자세한 처리 내용은 개인정보처리방침과 각 제공자의 정책을 참고하시기 바랍니다.</li>
     </ul>
 
     <div class="warning">
