@@ -22,7 +22,7 @@
 <body>
   <div class="container">
     <h1>👆 터치대장 개인정보처리방침</h1>
-    <p class="subtitle">최종 수정일: 2026년 8월 12일</p>
+    <p class="subtitle">최종 수정일: 2026년 9월 2일</p>
 
     <p>
       '터치대장'(운영: Dalin Soft, 이하 '앱')은 이용자의 개인정보를 중요시하며,
@@ -40,7 +40,9 @@
       <br>
       4) 등록할 앱을 고를 수 있도록 <strong>설치된 앱 목록을 조회</strong>하지만, <strong>화면에 보여주는 용도로만 사용</strong>하고 저장하거나 외부로 보내지 않습니다.
       <br>
-      5) 무료 제공을 위해 <strong>Google AdMob 광고</strong>를 사용하며, 광고 제공 과정에서 광고 식별자 등 일부 기기 정보가 Google에 의해 처리될 수 있습니다.
+      5) 무료 제공을 위해 <strong>Google AdMob 광고</strong>를 사용합니다. Google 광고 SDK는 IP 주소, 이용자 상호작용, 진단 정보 및 기기·계정 식별자를 광고·분석·부정행위 방지 목적으로 처리할 수 있습니다.
+      <br>
+      6) 유럽 등 관련 지역에서는 <strong>광고 개인정보 선택 화면</strong>이 표시되며, 선택은 앱 안에서 언제든 바꿀 수 있습니다.
     </div>
 
     <h2>제1조 (수집하는 개인정보의 항목 및 수집방법)</h2>
@@ -97,15 +99,36 @@
       <span class="mono">QUERY_ALL_PACKAGES</span> 권한은 사용하지 않습니다.
     </p>
 
-    <p><strong>(4) 광고 식별자 등(광고 SDK)</strong></p>
+    <p><strong>(4) 광고 및 개인정보 선택(Google AdMob·UMP SDK)</strong></p>
     <table>
       <tr>
-        <th>처리 항목(예시)</th>
-        <td>광고 식별자(Advertising ID), 기기·이벤트 정보, 대략적 위치 정보 등 — Google AdMob SDK가 광고 제공을 위해 처리</td>
+        <th>처리 항목</th>
+        <td>
+          IP 주소(IP 기반의 대략적 위치 추정 포함), 앱 실행·탭·광고 동영상 조회 등의 이용자 상호작용,
+          앱 및 SDK 진단 정보(앱 시작 시간·멈춤 발생률·에너지 사용량 등),
+          광고 ID·앱 세트 ID 및 해당되는 경우 기기에 로그인된 계정과 관련된 기타 식별자
+        </td>
       </tr>
-      <tr><th>처리 주체</th><td>Google LLC (Google AdMob / Google Mobile Ads)</td></tr>
-      <tr><th>처리 목적</th><td>광고 표시, 광고 성과 측정 및 부정 방지</td></tr>
-      <tr><th>참고</th><td>앱 자체는 위 정보를 별도로 수집·저장하지 않으며, 처리 범위는 Google의 정책을 따릅니다. (<span class="mono">https://policies.google.com/technologies/ads</span>)</td></tr>
+      <tr><th>처리 주체</th><td>Google LLC (Google AdMob / Google Mobile Ads / User Messaging Platform)</td></tr>
+      <tr><th>처리 시점·방법</th><td>앱 실행, 개인정보 선택 확인 및 광고 요청·표시 과정에서 SDK가 네트워크를 통해 자동 처리</td></tr>
+      <tr><th>처리 목적</th><td>광고 표시, 광고 및 앱 이용 분석, 부정행위 방지·보안·규정 준수, 관련 지역의 광고 개인정보 선택 관리</td></tr>
+      <tr><th>운영자의 처리</th><td>서비스 운영자는 위 정보를 별도로 열람하거나 자체 서버에 저장하지 않습니다.</td></tr>
+      <tr>
+        <th>이용자의 선택</th>
+        <td>
+          유럽경제지역·영국·스위스 등 관련 지역에서는 앱을 처음 실행할 때 광고 개인정보 선택 화면이 표시됩니다.
+          이후에도 앱 안의 <strong>광고 개인정보 설정</strong>에서 선택을 다시 확인하거나 바꿀 수 있으며,
+          안드로이드 기기 설정에서 광고 ID를 초기화하거나 맞춤 광고를 해제할 수 있습니다.
+        </td>
+      </tr>
+      <tr>
+        <th>참고</th>
+        <td>
+          전송 중인 정보는 TLS로 암호화되며, 실제 처리 범위는 이용자의 개인정보 선택과 Google 정책에 따라 달라질 수 있습니다.<br>
+          <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a> ·
+          <a href="https://policies.google.com/technologies/ads?hl=ko">Google 광고 관련 정책</a>
+        </td>
+      </tr>
     </table>
 
     <h2>제1조의2 (접근권한 안내)</h2>
@@ -212,13 +235,18 @@
         <th>처리/전송 항목(예시)</th>
       </tr>
       <tr>
-        <td>Google LLC (Google AdMob)</td>
+        <td>Google LLC (Google AdMob / Google Mobile Ads)</td>
         <td>무료 서비스 운영을 위한 광고 제공·측정</td>
-        <td>광고 식별자, 기기·이벤트 정보, 대략적 위치 정보 등</td>
+        <td>IP 주소, 광고 ID·앱 세트 ID 등 기기 식별자, 앱 상호작용, 진단 정보</td>
+      </tr>
+      <tr>
+        <td>Google LLC (User Messaging Platform)</td>
+        <td>관련 지역의 광고 개인정보 선택 화면 표시 및 선택 관리</td>
+        <td>IP 주소(지역 판단), 이용자의 개인정보 선택 값</td>
       </tr>
     </table>
     <p class="note">
-      ※ 앱이 사용하는 외부 서비스는 <strong>광고(Google AdMob) 하나뿐</strong>이며,
+      ※ 앱이 사용하는 외부 서비스는 <strong>광고 관련 Google 서비스뿐</strong>이며,
       지도·날씨·통계 등 다른 외부 서비스는 사용하지 않습니다.
     </p>
 
@@ -240,8 +268,8 @@
       <tr>
         <td>Google LLC</td>
         <td>미국 등(서비스 제공 국가)</td>
-        <td>광고 식별자 등 광고 제공 관련 정보</td>
-        <td>앱 내 광고 표시·측정</td>
+        <td>광고 제공 관련 정보(IP 주소, 광고 ID 등 기기 식별자, 앱 상호작용, 진단 정보) 및 광고 개인정보 선택 값</td>
+        <td>앱 내 광고 표시·측정, 관련 지역의 광고 개인정보 선택 관리</td>
         <td>서비스 이용 시 네트워크를 통한 전송</td>
         <td>Google의 정책에 따름</td>
       </tr>
